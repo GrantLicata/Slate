@@ -30,7 +30,7 @@ const Registration = () => {
 
   return (
     <div>
-        <h2>Register</h2>
+        <h2 className='mt-4'>Register</h2>
         <form className='col-6 mx-auto mt-3' onSubmit={registrationHandler}>
             <label>Username:</label>
             <input type='text' className='form-control' onChange={(e) => setUsername(e.target.value)}></input>
