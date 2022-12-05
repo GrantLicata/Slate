@@ -17,7 +17,6 @@ app.use(
     })
 )
 
-require('./routes/author.routes')(app)
 require('./routes/user.routes')(app)
 
 app.listen(PORT, ()=> {
