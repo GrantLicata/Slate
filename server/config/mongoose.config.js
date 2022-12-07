@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost/scribe',{
     useUnifiedTopology:true
 })
 .then(() => {
-    console.log("Connected to Scribes database")
+    console.log("Connected to the Scribe database")
 }).catch((err) => {
     console.log(err)
 })

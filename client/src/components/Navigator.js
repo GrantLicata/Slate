@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
-const Nav = () => {
+const Navigator = () => {
 
   let activeStyle = {
     color: "cyan"
@@ -39,4 +39,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default Navigator
