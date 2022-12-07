@@ -20,22 +20,7 @@ const Login = () => {
             password,
         },{withCredentials:true, credentials:'include'})
         .then((res) => {
-            navigate('/')
-        }).catch((err) => {
-            console.log(err)
-        })
-    }
-
-    const registrationHandler = (e) => {
-        e.preventDefault()
-        axios.post("http://localhost:8000/api/register",{
-            username,
-            email,
-            password,
-            confirmPassword
-        },{withCredentials:true, credentials:'include'})
-        .then((res) => {
-            navigate('/')
+            navigate('/main')
         }).catch((err) => {
             console.log(err)
         })

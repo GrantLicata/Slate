@@ -22,7 +22,6 @@ module.exports = {
         .then((results) => {
             res.json(results)
         }).catch((err) => {
-            //Error should be handled here differently when validations used in the model.
             res.status(400).json(err)
         })
     },

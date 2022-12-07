@@ -8,6 +8,7 @@ const Main = () => {
     <div>
         <Navigator />
         <NoteForm />
+        <NoteList />
     </div>
   )
 }

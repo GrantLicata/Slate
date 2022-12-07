@@ -35,9 +35,19 @@ const NoteList = () => {
 
   return (
     <div>
-
-        {/* Users notes and other related data will go here */}
-
+      {
+        noteList.map((note,index) => (
+          <div className='container mt-3' key={index}>
+            <div className="form-floating">
+              <textarea className="form-control" id="note-text" style={{height: "200px"}}>{ note.text }</textarea>
+            </div>
+            <button className='btn btn-danger py-1 col-12 mt-2' onClick={(e) => {
+                deleteHandler(note._id)
+                removeFromDom(note._id)
+            }}>Delete</button>
+          </div>
+        ))
+      }
     </div>
   )
 }

@@ -18,6 +18,7 @@ app.use(
 )
 
 require('./routes/user.routes')(app)
+require('./routes/note.routes')(app)
 
 app.listen(PORT, ()=> {
     console.log(`Server is up on port ${PORT}`)

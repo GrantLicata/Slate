@@ -22,7 +22,7 @@ const Registration = () => {
             confirmPassword
         },{withCredentials:true, credentials:'include'})
         .then((res) => {
-            navigate('/')
+            navigate('/main')
         }).catch((err) => {
             console.log(err)
         })

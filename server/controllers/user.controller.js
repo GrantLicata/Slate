@@ -24,7 +24,7 @@ module.exports = {
         }
         try{
             const isPasswordValid = await bcrypt.compare(req.body.password, user.password)
-            console.log(isPasswordValid)
+            console.log("The password is valid?",isPasswordValid)
             if(!isPasswordValid) {
                 res.status(400).json({error:"Invalid email/password"})
             } else {
