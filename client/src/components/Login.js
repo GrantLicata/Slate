@@ -8,10 +8,8 @@ const Login = () => {
   const navigate = useNavigate()
 
   // Separate state needed for the two forms
-  const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [confirmPassword, setConfirmPassword] = useState('')
 
   const loginHandler = (e) => {
         e.preventDefault()
@@ -20,6 +18,7 @@ const Login = () => {
             password,
         },{withCredentials:true, credentials:'include'})
         .then((res) => {
+            console.log(res)
             navigate('/main')
         }).catch((err) => {
             console.log(err)
@@ -27,12 +26,12 @@ const Login = () => {
     }
 
   return (
-    <div>
-        <h2 className='mt-4'>Login</h2>
-        <form className='col-6 mx-auto mt-3' onSubmit={loginHandler}>
+    <div className='container bg-secondary bg-opacity-25 rounded p-4 mt-5' style={{width:"400px"}}>
+        <h2 className='text-center'>Login</h2>
+        <form className='mx-auto d-flex flex-column' onSubmit={loginHandler}>
             <label>Email:</label>
             <input type='email' className='form-control' onChange={(e) => setEmail(e.target.value)}></input>
-            <label>Password:</label>
+            <label className='mt-2'>Password:</label>
             <input type='password' className='form-control' onChange={(e) => setPassword(e.target.value)}></input>
             <button className='btn btn-primary mt-3'>Login</button>
         </form>

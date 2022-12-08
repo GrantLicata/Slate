@@ -27,7 +27,7 @@ const NoteForm = () => {
             <div className="form-floating">
                 <textarea className="form-control" placeholder="Add a note here" id="note-text" style={{height: "200px"}} onChange={(e) => setText(e.target.value)} value={text}></textarea>
             </div>
-            <button type='submit' className='btn btn-secondary mt-2 py-1 col-12'>Submit</button>
+            <button type='submit' className='btn btn-secondary mt-2 py-1 col-12'>Save Note</button>
         </form>
     )
 }

@@ -29,17 +29,26 @@ const Registration = () => {
     }
 
   return (
-    <div>
-        <h2 className='mt-4'>Register</h2>
-        <form className='col-6 mx-auto mt-3' onSubmit={registrationHandler}>
+    <div className='container bg-secondary bg-opacity-25 rounded p-4 mt-5' style={{width:"400px"}}>
+        <h2 className='text-center'>Register</h2>
+        <form className='mx-auto d-flex flex-column' onSubmit={registrationHandler}>
             <label>Username:</label>
             <input type='text' className='form-control' onChange={(e) => setUsername(e.target.value)}></input>
-            <label>Email:</label>
-            <input type='text' className='form-control' onChange={(e) => setEmail(e.target.value)}></input>
-            <label>Password:</label>
-            <input type='text' className='form-control' onChange={(e) => setPassword(e.target.value)}></input>
-            <label>Confirm Password:</label>
-            <input type='text' className='form-control' onChange={(e) => setConfirmPassword(e.target.value)}></input>
+            <label className='mt-2'>Email:</label>
+            <input 
+              type='text' 
+              className='form-control' 
+              onChange={(e) => setEmail(e.target.value)}/>
+            <label className='mt-2'>Password:</label>
+            <input 
+              type='text' 
+              className='form-control' 
+              onChange={(e) => setPassword(e.target.value)}/>
+            <label className='mt-2'>Confirm Password:</label>
+            <input 
+              type='text' 
+              className='form-control' 
+              onChange={(e) => setConfirmPassword(e.target.value)}/>
             <button className='btn btn-primary mt-3'>Register</button>
         </form>
     </div>

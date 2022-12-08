@@ -28,10 +28,8 @@ const Navigator = () => {
   return (
     <nav className="navbar navbar-expand-sm bg-dark">
       <div className="container-fluid">
-        <div className="navbar-nav mx-auto">
-          <a className="navbar-brand text-warning" href="/"><strong>Scribe</strong></a>
-          <NavLink to='/' className='nav-link' style={({ isActive }) => isActive ? activeStyle : inactiveStyle } end>Home</NavLink>
-          <NavLink to='/form' className='nav-link' style={({ isActive }) => isActive ? activeStyle : inactiveStyle } end>Form</NavLink>
+        <div className="navbar-nav ms-2">
+          <a className="navbar-brand text-warning" href="/welcome"><strong>Scribe</strong></a>
           <NavLink to='/form' className='nav-link' style={({ isActive }) => isActive ? activeStyle : inactiveStyle } onClick={logout} end>Logout</NavLink>
         </div>
       </div>
