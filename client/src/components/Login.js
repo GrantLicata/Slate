@@ -30,9 +30,9 @@ const Login = () => {
         <h2 className='text-center'>Login</h2>
         <form className='mx-auto d-flex flex-column' onSubmit={loginHandler}>
             <label>Email:</label>
-            <input type='email' className='form-control' onChange={(e) => setEmail(e.target.value)}></input>
+            <input type='email' className='form-control' autoComplete='email' onChange={(e) => setEmail(e.target.value)}></input>
             <label className='mt-2'>Password:</label>
-            <input type='password' className='form-control' onChange={(e) => setPassword(e.target.value)}></input>
+            <input type='password' className='form-control' autoComplete='password' onChange={(e) => setPassword(e.target.value)}></input>
             <button className='btn btn-primary mt-3'>Login</button>
         </form>
     </div>
