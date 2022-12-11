@@ -18,7 +18,7 @@ const Login = () => {
             password,
         },{withCredentials:true, credentials:'include'})
         .then((res) => {
-            console.log(res)
+            console.log("User logged in")
             navigate('/main')
         }).catch((err) => {
             console.log(err)

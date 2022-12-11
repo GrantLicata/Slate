@@ -18,7 +18,7 @@ const Navigator = () => {
   const logout = (e) => {
     axios.get('http://localhost:8000/api/logout', {withCredentials:true})
     .then((res) => {
-      console.log('logged out')
+      console.log('User logged out')
       navigate('/login')
     }).catch((err) => {
       console.log(err)
@@ -30,7 +30,7 @@ const Navigator = () => {
       <div className="container-fluid">
         <div className="navbar-nav ms-2">
           <a className="navbar-brand text-warning" href="/welcome"><strong>Scribe</strong></a>
-          <NavLink to='/form' className='nav-link' style={({ isActive }) => isActive ? activeStyle : inactiveStyle } onClick={logout} end>Logout</NavLink>
+          <NavLink to='/' className='nav-link' style={({ isActive }) => isActive ? activeStyle : inactiveStyle } onClick={logout} end>Logout</NavLink>
         </div>
       </div>
     </nav>

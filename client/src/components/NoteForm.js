@@ -15,7 +15,6 @@ const NoteForm = () => {
             text: text
         }).then((res) => {
             console.log("The following has been imported to the DB", res)
-            navigate('/main')
         }).catch((err) => {
             console.log(err)
             setErrors(err.response.data.errors)
@@ -27,7 +26,7 @@ const NoteForm = () => {
             <div className="form-floating">
                 <textarea className="form-control" placeholder="Add a note here" id="note-text" style={{height: "200px"}} onChange={(e) => setText(e.target.value)} value={text}></textarea>
             </div>
-            <button type='submit' className='btn btn-secondary mt-2 py-1 col-12'>Save Note</button>
+            <button type='submit' className='btn btn-success mt-2 py-1'>Save Note</button>
         </form>
     )
 }
