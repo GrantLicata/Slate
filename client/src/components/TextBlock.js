@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
+import TextareaAutosize from 'react-textarea-autosize';
+
 
 const TextBlock = (props) => {
 
@@ -28,11 +30,15 @@ const TextBlock = (props) => {
             // setErrors(err.response.data.errors)
         })
     }
+
+    const textBlockStyle = {
+        padding: '10px'
+    }
     
     return (
         <div> 
             <div className="form-floating">
-                <textarea className="form-control" id="note-text" style={{height: "200px"}} value={text} onChange={(e) => {setText(e.target.value)}}/>
+                <TextareaAutosize className="form-control" id="note-text" value={text} style={textBlockStyle} onChange={(e) => {setText(e.target.value)}}/>
             </div>
             <div>
                 <button className='btn btn-danger py-1 mt-2' onClick={deleteHandler}>Delete Note</button>
