@@ -10,16 +10,21 @@ const NoteForm = () => {
     const navigate = useNavigate()
 
     const submitHandler = (e) => {
-        e.preventDefault()
-        axios.post('http://localhost:8000/api/addNote',{
-            text: text
-        }).then((res) => {
+        axios.post('http://localhost:8000/api/addNote',{ text: text }, {withCredentials: true, credentials: 'include'})
+        .then((res) => {
             console.log("The following has been imported to the DB", res)
         }).catch((err) => {
             console.log(err)
             setErrors(err.response.data.errors)
         })
     }
+
+    // function auto_grow(element) {
+    //     element.style.height = "5px";
+    //     element.style.height = (element.scrollHeight)+"px";
+    // }
+
+    //Previous issue summary: The data being entered in the axios post request needs to immediately follow the address. (Address, request body, credentials)
 
     return (
         <form className='container mt-3' onSubmit={submitHandler}>

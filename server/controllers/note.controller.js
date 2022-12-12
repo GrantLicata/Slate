@@ -2,7 +2,7 @@ const Note = require('../models/note.model')
 
 module.exports = {
     getAllNotes:(req,res) => {
-        Note.find().sort({text: 1})
+        Note.find()
         .then((results) => {
             res.json(results)
         }).catch((err) => {
@@ -26,7 +26,8 @@ module.exports = {
         })
     },
     updateNote:(req,res) => {
-        Note.updateOne({_id:req.params.id}, req.body, {new:true, runValidators: true} )
+        Note.updateOne({_id:req.params.id}, req.body, 
+        {new:true, runValidators: true})
         .then((results) => {
             res.json(results)
         }).catch((err) => {

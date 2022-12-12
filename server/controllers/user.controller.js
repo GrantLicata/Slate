@@ -29,7 +29,7 @@ module.exports = {
                 res.status(400).json({error:"Invalid email/password"})
             } else {
                 const userToken = jwt.sign({_id:user._id,email:user.email}, SECRET)
-                res.status(201).cookie('userToken', userToken, {httpOnly:true}).json({successMessage:'User logged in', user:user})
+                res.status(201).cookie('userToken', userToken).json({successMessage:'User logged in', user:user})
             }
         }catch(error){
             res.status(400).json({error:"Invalid email/password"})
