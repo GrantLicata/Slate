@@ -32,8 +32,12 @@ const NoteForm = () => {
                 <textarea className="form-control" placeholder="Add a note here" id="note-text" style={{height: "200px"}} onChange={(e) => setText(e.target.value)} value={text}></textarea>
             </div>
             <button type='submit' className='btn btn-success mt-2 py-1'>Save Note</button>
+            <trix-editor className=""></trix-editor>
         </form>
     )
 }
 
 export default NoteForm
+
+//Trix editor 
+//https://www.npmjs.com/package/trix
