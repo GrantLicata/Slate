@@ -5,6 +5,7 @@ import Registration from './components/Registration'
 import Main from './views/Main';
 import Welcome from './views/Welcome';
 import Sidebar from './components/Sidebar';
+import Trix from './views/Trix'
 
 function App() {
     return (
@@ -17,7 +18,7 @@ function App() {
             <Route path='/main' element={<Main />}/>
             <Route path='/welcome' element={<Welcome />}/>
             <Route path='/sidebar' element={<Sidebar />}/>
-
+            <Route path='/trix' element={<Trix />}/>
           </Routes>
         </BrowserRouter>
       </div>

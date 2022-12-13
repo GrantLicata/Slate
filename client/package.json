@@ -15,6 +15,7 @@
     "react-textarea-autosize": "^8.4.0",
     "slate": "^0.86.0",
     "slate-react": "^0.86.0",
+    "trix": "^2.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

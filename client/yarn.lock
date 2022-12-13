@@ -8762,6 +8762,11 @@ tr46@^2.1.0:
   dependencies:
     punycode "^2.1.1"
 
+trix@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/trix/-/trix-2.0.3.tgz"
+  integrity sha512-QIz71n75odwftH+YMg/oYPYsU7C+MwcEpWcQJDYKlnQ2Gu27zeXFTKbeTW2+UI4tHgQ2TlMiNpbqXLvJqcTzAg==
+
 tryer@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/tryer/-/tryer-1.0.1.tgz"
