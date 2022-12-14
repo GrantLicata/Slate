@@ -11,6 +11,7 @@ const Login = () => {
   // Separate state needed for the two forms
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [errors,setErrors] = useState({})
 
   const loginHandler = (e) => {
         e.preventDefault()
@@ -22,7 +23,8 @@ const Login = () => {
             console.log("User logged in")
             navigate('/main')
         }).catch((err) => {
-            console.log(err)
+            setErrors(err.response.data.error)
+            console.log(errors)
         })
     }
 
@@ -43,6 +45,9 @@ const Login = () => {
                 <label className='mt-2'>Password:</label>
                 <input type='password' className='form-control' autoComplete='password' onChange={(e) => setPassword(e.target.value)}></input>
                 <button className='btn btn-primary mt-3'>Login</button>
+                {/* <p className='text-danger mt-4 p-0'>{errors}</p> */}
+                {/* Error Notice: The error statement above appears to break the app.  */}
+                {/* Will need the login error structure built for registration too... */}
             </form>
         </div>
 
