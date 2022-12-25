@@ -1,15 +1,15 @@
 import React from 'react'
 
 import Navigator from '../components/Navigator'
-import Wysiwyg from '../components/TrixForm'
+import TrixEditor from '../components/TrixEditor'
 
-const Main = () => {
+const Trix = () => {
   return (
     <div>
         <Navigator />
-        <Wysiwyg />
+        <TrixEditor />
     </div>
   )
 }
 
-export default Main
+export default Trix

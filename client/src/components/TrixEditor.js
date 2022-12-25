@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate} from 'react-router-dom';
 
 
-const Wysiwyg = (props) => {
+const TrixEditor = (props) => {
 
     const [text,setText] = useState('')
     const [errors,setErrors] = useState({})
@@ -34,7 +34,7 @@ const Wysiwyg = (props) => {
     );
 }
 
-export default Wysiwyg;
+export default TrixEditor;
 
 //Trix editor 
 //https://www.npmjs.com/package/trix
